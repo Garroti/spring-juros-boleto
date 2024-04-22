@@ -18,6 +18,12 @@ public enum TipoExcecao {
 		public String getMensagemErro() {
 			return "O boleto informado ainda não esta vencido";
 		}
+	},
+	CONTEUDO_INVALIDO {
+		@Override
+		public String getMensagemErro() {
+			return "Conteudo inválido";
+		}
 	};
 	
 	public abstract String getMensagemErro();

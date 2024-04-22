@@ -14,7 +14,7 @@ import br.com.boletojuros.core.domain.enums.TipoBoleto;
 import br.com.boletojuros.core.domain.enums.TipoExcecao;
 import br.com.boletojuros.core.exceptions.ApplicationException;
 import br.com.boletojuros.core.port.in.CalculoBoletoPort;
-import br.com.boletojuros.core.port.out.ComplementoBoletoPort;
+import br.com.boletojuros.core.port.out.ComplementarBoletoPort;
 import br.com.boletojuros.core.port.out.SalvarCalculoBoletoPort;
 
 @Service
@@ -23,7 +23,7 @@ public class CalcularBoletoUseCase implements CalculoBoletoPort {
 	private static final BigDecimal JUROS_DIARIO = BigDecimal.valueOf(0.033);
 	
 	@Autowired
-	private ComplementoBoletoPort complementoBoletoPort;
+	private ComplementarBoletoPort complementoBoletoPort;
 	
 	@Autowired
 	private SalvarCalculoBoletoPort salvarCalculoBoletoPort;
